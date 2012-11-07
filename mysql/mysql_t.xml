@@ -1,30 +1,7 @@
 <?xml version="1.0"?>
-<!--
-	Version 0.4, 10:23 AM 10/13/2008
-	Corrected:  Joins_without_indexes_per_day,Qcache_lowmem_prunes_per_day (was uint, now float)
-
-	define('ITEM_TYPE_ZABBIX',0);
-	define('ITEM_TYPE_SNMPV1',1);
-	define('ITEM_TYPE_TRAPPER',2);
-	define('ITEM_TYPE_SIMPLE',3);
-	define('ITEM_TYPE_SNMPV2C',4);
-	define('ITEM_TYPE_INTERNAL',5);
-	define('ITEM_TYPE_SNMPV3',6);
-	define('ITEM_TYPE_ZABBIX_ACTIVE',7);
-	define('ITEM_TYPE_AGGREGATE',8);
-	define('ITEM_TYPE_HTTPTEST',9);
-	define('ITEM_TYPE_EXTERNAL',10);
-	define("ITEM_TYPE_DB_MONITOR",11);
-
-	define('ITEM_VALUE_TYPE_FLOAT',0);
-	define('ITEM_VALUE_TYPE_STR',1);
-	define('ITEM_VALUE_TYPE_LOG',2);
-	define('ITEM_VALUE_TYPE_UINT64',3);
-	define('ITEM_VALUE_TYPE_TEXT',4);
--->
 <zabbix_export version="1.0" date="06.09.08" time="04.11">
 	<hosts>
-		<host name="Template_MySQL_Server">
+		<host name="Template_MySQL_Server##">
 			<useip>0</useip>
 			<dns></dns>
 			<ip></ip>
@@ -34,7 +11,7 @@
 				<group>Templates</group>
 			</groups>
 			<items>
-				<item type="0" key="mysql.live" value_type="3">
+				<item type="0" key="mysql##.live" value_type="3">
 					<description>MySQL: Live Controller</description>
 					<delay>120</delay>
 					<history>7</history>
@@ -60,7 +37,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="0" key="mysql.daily" value_type="3">
+				<item type="0" key="mysql##.daily" value_type="3">
 					<description>MySQL: Daily Controller</description>
 					<delay>86400</delay>
 					<history>7</history>
@@ -86,7 +63,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_key_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_key_buffer_size" value_type="3">
 					<description>MySQL: Change key_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -112,7 +89,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_tmp_table_size" value_type="3">
+				<item type="2" key="mysql##.Change_tmp_table_size" value_type="3">
 					<description>MySQL: Change tmp_table_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -138,7 +115,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_table_cache" value_type="3">
+				<item type="2" key="mysql##.Change_table_cache" value_type="3">
 					<description>MySQL: Change table_cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -164,7 +141,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_sort_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_sort_buffer_size" value_type="3">
 					<description>MySQL: Change sort_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -190,7 +167,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_read_rnd_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_read_rnd_buffer_size" value_type="3">
 					<description>MySQL: Change read_rnd_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -216,7 +193,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_read_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_read_buffer_size" value_type="3">
 					<description>MySQL: Change read_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -242,7 +219,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_query_cache_size" value_type="3">
+				<item type="2" key="mysql##.Change_query_cache_size" value_type="3">
 					<description>MySQL: Change query_cache_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -268,7 +245,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_myisam_sort_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_myisam_sort_buffer_size" value_type="3">
 					<description>MySQL: Change key_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -294,7 +271,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_innodb_log_file_size" value_type="3">
+				<item type="2" key="mysql##.Change_innodb_log_file_size" value_type="3">
 					<description>MySQL: Change innodb_log_file_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -320,7 +297,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_innodb_log_buffer_size" value_type="3">
+				<item type="2" key="mysql##.Change_innodb_log_buffer_size" value_type="3">
 					<description>MySQL: Change innodb_log_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -346,7 +323,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_innodb_buffer_pool_size" value_type="3">
+				<item type="2" key="mysql##.Change_innodb_buffer_pool_size" value_type="3">
 					<description>MySQL: Change innodb_buffer_pool_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -372,7 +349,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Change_innodb_additional_mem_pool_size" value_type="3">
+				<item type="2" key="mysql##.Change_innodb_additional_mem_pool_size" value_type="3">
 					<description>MySQL: Change innodb_additional_mem_pool_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -398,7 +375,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_key_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_key_buffer_size" value_type="1">
 					<description>MySQL: Suggested key_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -424,7 +401,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_tmp_table_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_tmp_table_size" value_type="1">
 					<description>MySQL: Suggested tmp_table_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -450,7 +427,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_table_cache" value_type="1">
+				<item type="2" key="mysql##.Suggested_table_cache" value_type="1">
 					<description>MySQL: Suggested table_cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -476,7 +453,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_sort_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_sort_buffer_size" value_type="1">
 					<description>MySQL: Suggested sort_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -502,7 +479,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_read_rnd_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_read_rnd_buffer_size" value_type="1">
 					<description>MySQL: Suggested read_rnd_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -528,7 +505,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_read_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_read_buffer_size" value_type="1">
 					<description>MySQL: Suggested read_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -554,7 +531,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_query_cache_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_query_cache_size" value_type="1">
 					<description>MySQL: Suggested query_cache_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -580,7 +557,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_myisam_sort_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_myisam_sort_buffer_size" value_type="1">
 					<description>MySQL: Suggested myisam_sort_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -606,7 +583,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_innodb_log_file_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_innodb_log_file_size" value_type="1">
 					<description>MySQL: Suggested innodb_log_file_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -632,7 +609,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_innodb_log_buffer_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_innodb_log_buffer_size" value_type="1">
 					<description>MySQL: Suggested innodb_log_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -658,7 +635,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_innodb_buffer_pool_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_innodb_buffer_pool_size" value_type="1">
 					<description>MySQL: Suggested innodb_buffer_pool_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -684,7 +661,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Suggested_innodb_additional_mem_pool_size" value_type="1">
+				<item type="2" key="mysql##.Suggested_innodb_additional_mem_pool_size" value_type="1">
 					<description>MySQL: Suggested innodb_additional_mem_pool_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -710,7 +687,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Aborted_clients" value_type="3">
+				<item type="2" key="mysql##.Aborted_clients" value_type="3">
 					<description>MySQL: Clients: Count terminated abnormally</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -736,7 +713,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.Aborted_connects" value_type="3">
+				<item type="2" key="mysql##.Aborted_connects" value_type="3">
 					<description>MySQL: Connections: Refused</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -762,7 +739,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Connections" value_type="3">
+				<item type="2" key="mysql##.Connections" value_type="3">
 					<description>MySQL: Connections: Total</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -788,7 +765,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>
-				<item type="2" key="mysql.max_connections" value_type="3">
+				<item type="2" key="mysql##.max_connections" value_type="3">
 					<description>MySQL: Connections: Max allowed</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -814,7 +791,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Successful_connects" value_type="3">
+				<item type="2" key="mysql##.Successful_connects" value_type="3">
 					<description>MySQL: Connections: Successful</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -840,7 +817,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Max_used_connections" value_type="3">
+				<item type="2" key="mysql##.Max_used_connections" value_type="3">
 					<description>MySQL: Connections: Maximum number used</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -866,7 +843,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_aborted_connections" value_type="3">
+				<item type="2" key="mysql##.Percent_aborted_connections" value_type="3">
 					<description>MySQL: Connections: Number aborted</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -892,7 +869,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_connections_used" value_type="3">
+				<item type="2" key="mysql##.Percent_connections_used" value_type="3">
 					<description>MySQL: Connections: Percent of total used</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -918,7 +895,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_maximum_connections_ever" value_type="3">
+				<item type="2" key="mysql##.Percent_maximum_connections_ever" value_type="3">
 					<description>MySQL: Connections: Maximum ever used %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -944,7 +921,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Accounts_without_password" value_type="3">
+				<item type="2" key="mysql##.Accounts_without_password" value_type="3">
 					<description>MySQL: Accounts with blank password</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -970,7 +947,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Accounts_with_broad_host_specifier" value_type="3">
+				<item type="2" key="mysql##.Accounts_with_broad_host_specifier" value_type="3">
 					<description>MySQL: Accounts with blank host or wildcard specifiers</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -996,7 +973,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Alter_priv_count" value_type="3">
+				<item type="2" key="mysql##.Alter_priv_count" value_type="3">
 					<description>MySQL: Accounts with Alter privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1022,7 +999,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Anonymous_accounts_count" value_type="3">
+				<item type="2" key="mysql##.Anonymous_accounts_count" value_type="3">
 					<description>MySQL: Accounts with blank usernames</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1048,7 +1025,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Delete_priv_count" value_type="3">
+				<item type="2" key="mysql##.Delete_priv_count" value_type="3">
 					<description>MySQL: Accounts with Delete privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1074,7 +1051,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Drop_priv_count" value_type="3">
+				<item type="2" key="mysql##.Drop_priv_count" value_type="3">
 					<description>MySQL: Accounts with Drop privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1100,7 +1077,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Excessive_revokes" value_type="3">
+				<item type="2" key="mysql##.Excessive_revokes" value_type="3">
 					<description>MySQL: Accounts or Users excessive revokes</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1126,7 +1103,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.File_priv_count" value_type="3">
+				<item type="2" key="mysql##.File_priv_count" value_type="3">
 					<description>MySQL: Accounts with File privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1152,7 +1129,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Grant_priv_count" value_type="3">
+				<item type="2" key="mysql##.Grant_priv_count" value_type="3">
 					<description>MySQL: Accounts with Grant privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1178,7 +1155,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Insert_priv_count" value_type="3">
+				<item type="2" key="mysql##.Insert_priv_count" value_type="3">
 					<description>MySQL: Accounts with Insert privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1204,7 +1181,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Lock_tables_priv_count" value_type="3">
+				<item type="2" key="mysql##.Lock_tables_priv_count" value_type="3">
 					<description>MySQL: Accounts with Lock privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1230,7 +1207,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Process_priv_count" value_type="3">
+				<item type="2" key="mysql##.Process_priv_count" value_type="3">
 					<description>MySQL: Accounts with Process privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1256,7 +1233,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Shut_down_priv_count" value_type="3">
+				<item type="2" key="mysql##.Shut_down_priv_count" value_type="3">
 					<description>MySQL: Accounts with Shut Down privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1282,7 +1259,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Super_priv_count" value_type="3">
+				<item type="2" key="mysql##.Super_priv_count" value_type="3">
 					<description>MySQL: Accounts with Super privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1308,7 +1285,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Update_priv_count" value_type="3">
+				<item type="2" key="mysql##.Update_priv_count" value_type="3">
 					<description>MySQL: Accounts with Update privileges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1334,7 +1311,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Architecture_handles_all_memory" value_type="3">
+				<item type="2" key="mysql##.Architecture_handles_all_memory" value_type="3">
 					<description>MySQL: Architecture: Hardware supports total memory</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1360,7 +1337,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Maximum_memory_exceeds_32bit_capabilities" value_type="3">
+				<item type="2" key="mysql##.Maximum_memory_exceeds_32bit_capabilities" value_type="3">
 					<description>MySQL: Architecture: MySQL max mem over 32-bit capabilities</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1386,7 +1363,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Maximum_memory_over_physical" value_type="3">
+				<item type="2" key="mysql##.Maximum_memory_over_physical" value_type="3">
 					<description>MySQL: Architecture: MySQL may use more memory than available</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1412,7 +1389,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Maximum_memory_total" value_type="0">
+				<item type="2" key="mysql##.Maximum_memory_total" value_type="0">
 					<description>MySQL: Architecture: Max mem MySQL could use</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1438,7 +1415,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Available" value_type="3">
+				<item type="2" key="mysql##.Available" value_type="3">
 					<description>MySQL: Available</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1464,7 +1441,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Version" value_type="1">
+				<item type="2" key="mysql##.Version" value_type="1">
 					<description>MySQL: Current version</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1490,7 +1467,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Uptime" value_type="1">
+				<item type="2" key="mysql##.Uptime" value_type="1">
 					<description>MySQL: Uptime in seconds</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1516,7 +1493,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Binlog_cache_disk_use" value_type="3">
+				<item type="2" key="mysql##.Binlog_cache_disk_use" value_type="3">
 					<description>MySQL: Binlog: Number of transactions that use the cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1542,7 +1519,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.binlog_cache_size" value_type="3">
+				<item type="2" key="mysql##.binlog_cache_size" value_type="3">
 					<description>MySQL: Binlog: Cache size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1568,7 +1545,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Binlog_cache_use" value_type="3">
+				<item type="2" key="mysql##.Binlog_cache_use" value_type="3">
 					<description>MySQL: Binlog: Transactions over binlog_cache_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1594,7 +1571,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.log_bin" value_type="3">
+				<item type="2" key="mysql##.log_bin" value_type="3">
 					<description>MySQL: Binlog: Is enabled</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1620,7 +1597,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.sync_binlog" value_type="3">
+				<item type="2" key="mysql##.sync_binlog" value_type="3">
 					<description>MySQL: Binlog: Sync to disk each write</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1646,7 +1623,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Bytes_received" value_type="3">
+				<item type="2" key="mysql##.Bytes_received" value_type="3">
 					<description>MySQL: Network bytes received</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1672,7 +1649,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Bytes_sent" value_type="3">
+				<item type="2" key="mysql##.Bytes_sent" value_type="3">
 					<description>MySQL: Network bytes sent</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1698,7 +1675,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_alter_db" value_type="3">
+				<item type="2" key="mysql##.Com_alter_db" value_type="3">
 				
 					<description>MySQL: Number of database alterations</description>
 					<delay>300</delay>
@@ -1725,7 +1702,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_alter_table" value_type="3">
+				<item type="2" key="mysql##.Com_alter_table" value_type="3">
 					<description>MySQL: Number of table alterations</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1751,7 +1728,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_create_db" value_type="3">
+				<item type="2" key="mysql##.Com_create_db" value_type="3">
 					<description>MySQL: Number of database creations</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1777,7 +1754,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_create_function" value_type="3">
+				<item type="2" key="mysql##.Com_create_function" value_type="3">
 					<description>MySQL: Number of functions created</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1803,7 +1780,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_create_index" value_type="3">
+				<item type="2" key="mysql##.Com_create_index" value_type="3">
 					<description>MySQL: Number of indices created</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1829,7 +1806,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_create_table" value_type="3">
+				<item type="2" key="mysql##.Com_create_table" value_type="3">
 					<description>MySQL: Number of tables created</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1855,7 +1832,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_drop_db" value_type="3">
+				<item type="2" key="mysql##.Com_drop_db" value_type="3">
 					<description>MySQL: Number of databases dropped</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1881,7 +1858,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_drop_function" value_type="3">
+				<item type="2" key="mysql##.Com_drop_function" value_type="3">
 					<description>MySQL: Number of functions dropped</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1907,7 +1884,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_drop_index" value_type="3">
+				<item type="2" key="mysql##.Com_drop_index" value_type="3">
 					<description>MySQL: Number of indices dropped</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1933,7 +1910,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_drop_table" value_type="3">
+				<item type="2" key="mysql##.Com_drop_table" value_type="3">
 					<description>MySQL: Number of tables dropped</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1959,7 +1936,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_drop_user" value_type="3">
+				<item type="2" key="mysql##.Com_drop_user" value_type="3">
 					<description>MySQL: Number of users dropped</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -1985,7 +1962,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Com_grant" value_type="3">
+				<item type="2" key="mysql##.Com_grant" value_type="3">
 					<description>MySQL: Number of permissions granted</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2011,7 +1988,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Recent_schema_changes" value_type="3">
+				<item type="2" key="mysql##.Recent_schema_changes" value_type="3">
 					<description>MySQL: Number of recent schema changes</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2037,7 +2014,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Created_tmp_disk_tables" value_type="3">
+				<item type="2" key="mysql##.Created_tmp_disk_tables" value_type="3">
 					<description>MySQL: Tmp tables created on disk</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2063,7 +2040,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Created_tmp_tables" value_type="3">
+				<item type="2" key="mysql##.Created_tmp_tables" value_type="3">
 					<description>MySQL: Tmp tables created</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2089,7 +2066,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_tmp_tables_on_disk" value_type="3">
+				<item type="2" key="mysql##.Percent_tmp_tables_on_disk" value_type="3">
 					<description>MySQL: Tmp tables written to disk %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2115,7 +2092,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Sort_merge_passes" value_type="3">
+				<item type="2" key="mysql##.Sort_merge_passes" value_type="3">
 					<description>MySQL: Tmp files created due to &gt; sort_buffer_size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2141,7 +2118,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.have_symlink" value_type="1">
+				<item type="2" key="mysql##.have_symlink" value_type="1">
 					<description>MySQL: Config: symlinks are enabled</description>					
 					<delay>300</delay>
 					<history>7</history>
@@ -2167,7 +2144,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Is_root_remote_login_enabled" value_type="3">
+				<item type="2" key="mysql##.Is_root_remote_login_enabled" value_type="3">
 					<description>MySQL: Config: root login enabled</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2193,7 +2170,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.sql_mode" value_type="0">
+				<item type="2" key="mysql##.sql_mode" value_type="0">
 					<description>MySQL: Config: sql_mode</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2219,7 +2196,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Is_root_without_password" value_type="3">
+				<item type="2" key="mysql##.Is_root_without_password" value_type="3">
 					<description>MySQL: Config: No password on root</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2245,7 +2222,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.query_prealloc_size" value_type="3">
+				<item type="2" key="mysql##.query_prealloc_size" value_type="3">
 					<description>MySQL: Config: Query exec and parsing buffer</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2271,7 +2248,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.local_infile" value_type="3">
+				<item type="2" key="mysql##.local_infile" value_type="3">
 					<description>MySQL: Config: LOAD DATA LOCAL is insecure</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2297,7 +2274,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.log_queries_not_using_indexes" value_type="3">
+				<item type="2" key="mysql##.log_queries_not_using_indexes" value_type="3">
 					<description>MySQL: Config: Log queries w/o an index</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2323,7 +2300,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.expire_logs_days" value_type="3">
+				<item type="2" key="mysql##.expire_logs_days" value_type="3">
 					<description>MySQL: Config: Expire log days</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2349,7 +2326,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.log_slow_queries" value_type="3">
+				<item type="2" key="mysql##.log_slow_queries" value_type="3">
 					<description>MySQL: Config: Log slow queries</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2375,7 +2352,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.long_query_time" value_type="3">
+				<item type="2" key="mysql##.long_query_time" value_type="3">
 					<description>MySQL: Config: Time before a query is 'slow'</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2401,7 +2378,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.old_passwords" value_type="3">
+				<item type="2" key="mysql##.old_passwords" value_type="3">
 					<description>MySQL: Config: Old passwords supported</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2427,7 +2404,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_files_open" value_type="3">
+				<item type="2" key="mysql##.Percent_files_open" value_type="3">
 					<description>MySQL: Config: Files open vs. max allowed %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2453,7 +2430,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Root_accounts_count" value_type="3">
+				<item type="2" key="mysql##.Root_accounts_count" value_type="3">
 					<description>MySQL: Config: Root account present</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2479,7 +2456,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.secure_auth" value_type="3">
+				<item type="2" key="mysql##.secure_auth" value_type="3">
 					<description>MySQL: Config: Old password authentication allowed</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2505,7 +2482,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.skip_show_database" value_type="3">
+				<item type="2" key="mysql##.skip_show_database" value_type="3">
 					<description>MySQL: Config: Users can view all databases</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2531,7 +2508,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.slow_launch_time" value_type="3">
+				<item type="2" key="mysql##.slow_launch_time" value_type="3">
 					<description>MySQL: Config: Launch time for a slow thread</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2557,7 +2534,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.tmp_table_size" value_type="3">
+				<item type="2" key="mysql##.tmp_table_size" value_type="3">
 					<description>MySQL: Config: Tmp table max size in-memory</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2583,7 +2560,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.wait_timeout" value_type="3">
+				<item type="2" key="mysql##.wait_timeout" value_type="3">
 					<description>MySQL: Config: Idle time before client disconnected</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2609,7 +2586,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Joins_without_indexes" value_type="3">
+				<item type="2" key="mysql##.Joins_without_indexes" value_type="3">
 					<description>MySQL: Joins not using indices</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2635,7 +2612,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Joins_without_indexes_per_day" value_type="0">
+				<item type="2" key="mysql##.Joins_without_indexes_per_day" value_type="0">
 					<description>MySQL: Joins average not using indices per day</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2661,7 +2638,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.join_buffer_size" value_type="3">
+				<item type="2" key="mysql##.join_buffer_size" value_type="3">
 					<description>MySQL: Joins buffer size requiring full table scan</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2687,7 +2664,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.key_buffer_size" value_type="3">
+				<item type="2" key="mysql##.key_buffer_size" value_type="3">
 					<description>MySQL: MyISAM: Key buffer size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2713,7 +2690,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.key_cache_block_size" value_type="3">
+				<item type="2" key="mysql##.key_cache_block_size" value_type="3">
 					<description>MySQL: MyISAM: Block size of the key buffer</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2739,7 +2716,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Key_reads" value_type="3">
+				<item type="2" key="mysql##.Key_reads" value_type="3">
 					<description>MySQL: MyISAM: Number of reads of a key block from disk</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2765,7 +2742,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Key_read_requests" value_type="3">
+				<item type="2" key="mysql##.Key_read_requests" value_type="3">
 					<description>MySQL: MyISAM: Key cache blocks requested</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2791,7 +2768,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Key_writes" value_type="3">
+				<item type="2" key="mysql##.Key_writes" value_type="3">
 					<description>MySQL: MyISAM: Key writes</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2817,7 +2794,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Key_write_requests" value_type="3">
+				<item type="2" key="mysql##.Key_write_requests" value_type="3">
 					<description>MySQL: MyISAM: Key block write requests</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2843,7 +2820,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.myisam_recover_options" value_type="3">
+				<item type="2" key="mysql##.myisam_recover_options" value_type="3">
 					<description>MySQL: MyISAM: Crashes not auto corrected</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2869,7 +2846,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.myisam_sort_buffer_size" value_type="3">
+				<item type="2" key="mysql##.myisam_sort_buffer_size" value_type="3">
 					<description>MySQL: MyISAM: Sort buffer to rebuilding index after repair</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2895,7 +2872,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Number_myisam_key_blocks" value_type="3">
+				<item type="2" key="mysql##.Number_myisam_key_blocks" value_type="3">
 					<description>MySQL: MyISAM: Key cache blocks</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2921,7 +2898,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_myisam_key_cache_hit_rate" value_type="3">
+				<item type="2" key="mysql##.Percent_myisam_key_cache_hit_rate" value_type="3">
 					<description>MySQL: MyISAM: Key cache Hit ratio %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2947,7 +2924,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_myisam_key_cache_in_use" value_type="3">
+				<item type="2" key="mysql##.Percent_myisam_key_cache_in_use" value_type="3">
 					<description>MySQL: MyISAM: Key cache in use %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2973,7 +2950,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_myisam_key_cache_write_ratio" value_type="3">
+				<item type="2" key="mysql##.Percent_myisam_key_cache_write_ratio" value_type="3">
 					<description>MySQL: MyISAM: Key cache write ratio %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -2999,7 +2976,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.read_buffer_size" value_type="3">
+				<item type="2" key="mysql##.read_buffer_size" value_type="3">
 					<description>MySQL: MyISAM: Buffer size for full-table scans</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3025,7 +3002,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Used_myisam_key_cache_blocks" value_type="3">
+				<item type="2" key="mysql##.Used_myisam_key_cache_blocks" value_type="3">
 					<description>MySQL: MyISAM: Key cache blocks used</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3051,7 +3028,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Last_Errno" value_type="3">
+				<item type="2" key="mysql##.Last_Errno" value_type="3">
 					<description>MySQL: Last error number generated</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3077,7 +3054,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Last_Error" value_type="1">
+				<item type="2" key="mysql##.Last_Error" value_type="1">
 					<description>MySQL: Last error string</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3103,7 +3080,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.max_heap_table_size" value_type="3">
+				<item type="2" key="mysql##.max_heap_table_size" value_type="3">
 					<description>MySQL: Table: Maximum size of a memory table</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3129,7 +3106,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Opened_tables" value_type="3">
+				<item type="2" key="mysql##.Opened_tables" value_type="3">
 					<description>MySQL: Table: Number of cache misses</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3155,7 +3132,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Open_tables" value_type="3">
+				<item type="2" key="mysql##.Open_tables" value_type="3">
 					<description>MySQL: Table: Currently open</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3181,7 +3158,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_table_cache_hit_rate" value_type="3">
+				<item type="2" key="mysql##.Percent_table_cache_hit_rate" value_type="3">
 					<description>MySQL: Table: Cache hit rate %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3207,7 +3184,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_table_lock_contention" value_type="3">
+				<item type="2" key="mysql##.Percent_table_lock_contention" value_type="3">
 					<description>MySQL: Table: Locks vs. table opens %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3233,7 +3210,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Fragmented_table_count" value_type="3">
+				<item type="2" key="mysql##.Fragmented_table_count" value_type="3">
 					<description>MySQL: Table: Fragmented count in all databases</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3259,7 +3236,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.table_cache" value_type="3">
+				<item type="2" key="mysql##.table_cache" value_type="3">
 					<description>MySQL: Table: Number that can be cached</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3285,7 +3262,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Table_locks_immediate" value_type="3">
+				<item type="2" key="mysql##.Table_locks_immediate" value_type="3">
 					<description>MySQL: Table: Locks acquired immediately</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3311,7 +3288,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Table_locks_waited" value_type="3">
+				<item type="2" key="mysql##.Table_locks_waited" value_type="3">
 					<description>MySQL: Table: Locks that required waiting</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3337,7 +3314,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_innodb_cache_hit_rate" value_type="3">
+				<item type="2" key="mysql##.Percent_innodb_cache_hit_rate" value_type="3">
 					<description>MySQL: InnoDB: Percent hit rate of cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3363,7 +3340,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_innodb_cache_write_waits_required" value_type="3">
+				<item type="2" key="mysql##.Percent_innodb_cache_write_waits_required" value_type="3">
 					<description>MySQL: InnoDB: Percent of cache writes to wait</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3389,7 +3366,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_innodb_log_size_vs_buffer_pool" value_type="3">
+				<item type="2" key="mysql##.Percent_innodb_log_size_vs_buffer_pool" value_type="3">
 					<description>MySQL: InnoDB: Data vs. buffer size %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3415,7 +3392,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_innodb_log_write_waits_required" value_type="3">
+				<item type="2" key="mysql##.Percent_innodb_log_write_waits_required" value_type="3">
 					<description>MySQL: InnoDB: Log writes to wait %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3441,7 +3418,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_additional_mem_pool_size" value_type="3">
+				<item type="2" key="mysql##.innodb_additional_mem_pool_size" value_type="3">
 					<description>MySQL: InnoDB: Buffer used to store internal structures</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3467,7 +3444,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_buffer_pool_size" value_type="3">
+				<item type="2" key="mysql##.innodb_buffer_pool_size" value_type="3">
 					<description>MySQL: InnoDB: Buffer_pool size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3493,7 +3470,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_flush_log_at_trx_commit" value_type="3">
+				<item type="2" key="mysql##.innodb_flush_log_at_trx_commit" value_type="3">
 					<description>MySQL: InnoDB: How to flush logs</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3519,7 +3496,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_log_buffer_size" value_type="3">
+				<item type="2" key="mysql##.innodb_log_buffer_size" value_type="3">
 					<description>MySQL: InnoDB: Log buffer size for tables</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3545,7 +3522,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_log_files_in_group" value_type="3">
+				<item type="2" key="mysql##.innodb_log_files_in_group" value_type="3">
 					<description>MySQL: InnoDB: Number of files in log group</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3571,7 +3548,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.innodb_log_file_size" value_type="3">
+				<item type="2" key="mysql##.innodb_log_file_size" value_type="3">
 					<description>MySQL: InnoDB: Size of file in each log group</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3597,7 +3574,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Innodb_log_file_size_total" value_type="3">
+				<item type="2" key="mysql##.Innodb_log_file_size_total" value_type="3">
 					<description>MySQL: InnoDB: Total size of log files</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3623,7 +3600,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.have_query_cache" value_type="1">
+				<item type="2" key="mysql##.have_query_cache" value_type="1">
 					<description>MySQL: Query cache is enabled</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3649,7 +3626,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_query_cache_fragmentation" value_type="3">
+				<item type="2" key="mysql##.Percent_query_cache_fragmentation" value_type="3">
 					<description>MySQL: Query cache fragmentation</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3675,7 +3652,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_query_cache_hit_rate" value_type="3">
+				<item type="2" key="mysql##.Percent_query_cache_hit_rate" value_type="3">
 					<description>MySQL: Query cache hit rate %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3701,7 +3678,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_query_cache_pruned_from_inserts" value_type="3">
+				<item type="2" key="mysql##.Percent_query_cache_pruned_from_inserts" value_type="3">
 					<description>MySQL: Query cache number pruned due to memory %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3727,7 +3704,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_free_blocks" value_type="3">
+				<item type="2" key="mysql##.Qcache_free_blocks" value_type="3">
 					<description>MySQL: Query cache free blocks</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3753,7 +3730,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_free_memory" value_type="3">
+				<item type="2" key="mysql##.Qcache_free_memory" value_type="3">
 					<description>MySQL: Query cache free memory</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3779,7 +3756,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_hits" value_type="3">
+				<item type="2" key="mysql##.Qcache_hits" value_type="3">
 					<description>MySQL: Query cache hits</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3805,7 +3782,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_inserts" value_type="3">
+				<item type="2" key="mysql##.Qcache_inserts" value_type="3">
 					<description>MySQL: Query cache number inserted</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3831,7 +3808,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_lowmem_prunes" value_type="3">
+				<item type="2" key="mysql##.Qcache_lowmem_prunes" value_type="3">
 					<description>MySQL: Query cache number pruned from query cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3857,7 +3834,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_lowmem_prunes_per_day" value_type="0">
+				<item type="2" key="mysql##.Qcache_lowmem_prunes_per_day" value_type="0">
 					<description>MySQL: Query cache average pruned from cache per day</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3883,7 +3860,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_not_cached" value_type="3">
+				<item type="2" key="mysql##.Qcache_not_cached" value_type="3">
 					<description>MySQL: Query cache number not cached</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3909,7 +3886,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_queries_in_cache" value_type="3">
+				<item type="2" key="mysql##.Qcache_queries_in_cache" value_type="3">
 					<description>MySQL: Query cache number currently in cache</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3935,7 +3912,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Qcache_total_blocks" value_type="3">
+				<item type="2" key="mysql##.Qcache_total_blocks" value_type="3">
 					<description>MySQL: Query cache total blocks</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3961,7 +3938,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.query_cache_limit" value_type="3">
+				<item type="2" key="mysql##.query_cache_limit" value_type="3">
 					<description>MySQL: Query cache resultset max size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -3987,7 +3964,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.query_cache_min_res_unit" value_type="3">
+				<item type="2" key="mysql##.query_cache_min_res_unit" value_type="3">
 					<description>MySQL: Query cache block size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4013,7 +3990,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.query_cache_size" value_type="3">
+				<item type="2" key="mysql##.query_cache_size" value_type="3">
 					<description>MySQL: Query cache size</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4039,7 +4016,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.query_cache_type" value_type="3">
+				<item type="2" key="mysql##.query_cache_type" value_type="3">
 					<description>MySQL: Query cache type</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4065,7 +4042,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_deletes_vs_total" value_type="3">
+				<item type="2" key="mysql##.Percent_deletes_vs_total" value_type="3">
 					<description>MySQL: Queries: % Deletes of overall</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4091,7 +4068,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_full_table_scans" value_type="3">
+				<item type="2" key="mysql##.Percent_full_table_scans" value_type="3">
 					<description>MySQL: Queries: % Full table scans</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4117,7 +4094,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Queries_per_sec" value_type="0">
+				<item type="2" key="mysql##.Queries_per_sec" value_type="0">
 					<description>MySQL: Queries: Queries per second</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4142,7 +4119,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_inserts_vs_total" value_type="3">
+				<item type="2" key="mysql##.Percent_inserts_vs_total" value_type="3">
 					<description>MySQL: Queries: % Inserts of overall</description>					
 					<delay>300</delay>
 					<history>7</history>
@@ -4168,7 +4145,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Average_rows_per_query" value_type="0">
+				<item type="2" key="mysql##.Average_rows_per_query" value_type="0">
 					<description>MySQL: Queries: Average rows returned</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4194,7 +4171,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Indexed_rows_returned" value_type="3">
+				<item type="2" key="mysql##.Indexed_rows_returned" value_type="3">
 					<description>MySQL: Queries: Total rows using indices</description>					
 					<delay>300</delay>
 					<history>7</history>
@@ -4220,7 +4197,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Questions" value_type="3">
+				<item type="2" key="mysql##.Questions" value_type="3">
 					<description>MySQL: Queries: Total number executed</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4246,7 +4223,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.read_rnd_buffer_size" value_type="3">
+				<item type="2" key="mysql##.read_rnd_buffer_size" value_type="3">
 					<description>MySQL: Queries: Buffer used for ORDER BY</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4272,7 +4249,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_selects_vs_total" value_type="3">
+				<item type="2" key="mysql##.Percent_selects_vs_total" value_type="3">
 					<description>MySQL: Queries: % Selects of overall queries</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4298,7 +4275,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_tmp_sort_tables" value_type="3">
+				<item type="2" key="mysql##.Percent_tmp_sort_tables" value_type="3">
 					<description>MySQL: Queries: % Sorts requiring tmp tables</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4324,7 +4301,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_transactions_saved_tmp_file" value_type="3">
+				<item type="2" key="mysql##.Percent_transactions_saved_tmp_file" value_type="3">
 					<description>MySQL: Queries: % transactions saved to disk</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4350,7 +4327,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_updates_vs_total" value_type="3">
+				<item type="2" key="mysql##.Percent_updates_vs_total" value_type="3">
 					<description>MySQL: Queries: % Updates of overall queries</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4376,7 +4353,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_writes_vs_total" value_type="3">
+				<item type="2" key="mysql##.Percent_writes_vs_total" value_type="3">
 					<description>MySQL: Queries: % Write of overall queries</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4402,7 +4379,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Select_full_join" value_type="3">
+				<item type="2" key="mysql##.Select_full_join" value_type="3">
 					<description>MySQL: Queries: Joins w/ full table scans of 2+ tables</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4428,7 +4405,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Select_scan" value_type="3">
+				<item type="2" key="mysql##.Select_scan" value_type="3">
 					<description>MySQL: Queries: Selects w/ full table scans</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4454,7 +4431,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.sort_buffer_size" value_type="3">
+				<item type="2" key="mysql##.sort_buffer_size" value_type="3">
 					<description>MySQL: Queries: Sort buffer size for in-memory sorting</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4480,7 +4457,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Sort_range" value_type="3">
+				<item type="2" key="mysql##.Sort_range" value_type="3">
 					<description>MySQL: Queries: Sorts done using ranges</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4506,7 +4483,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Sort_scan" value_type="3">
+				<item type="2" key="mysql##.Sort_scan" value_type="3">
 					<description>MySQL: Queries: Sorts that scanned a table</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4532,7 +4509,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Slow_queries" value_type="3">
+				<item type="2" key="mysql##.Slow_queries" value_type="3">
 					<description>MySQL: Queries: Number flagged as slow</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4558,7 +4535,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Total_rows_returned" value_type="3">
+				<item type="2" key="mysql##.Total_rows_returned" value_type="3">
 					<description>MySQL: Queries: Total rows returned</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4584,7 +4561,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Total_sort" value_type="3">
+				<item type="2" key="mysql##.Total_sort" value_type="3">
 					<description>MySQL: Queries: Sorts total number</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4610,7 +4587,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Slow_launch_threads" value_type="3">
+				<item type="2" key="mysql##.Slow_launch_threads" value_type="3">
 					<description>MySQL: Threads launched which were slow</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4636,7 +4613,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Percent_thread_cache_hit_rate" value_type="3">
+				<item type="2" key="mysql##.Percent_thread_cache_hit_rate" value_type="3">
 					<description>MySQL: Threads hitting the thread-cache %</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4662,7 +4639,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Threads_cached" value_type="3">
+				<item type="2" key="mysql##.Threads_cached" value_type="3">
 					<description>MySQL: Threads cached</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4688,7 +4665,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Threads_connected" value_type="3">
+				<item type="2" key="mysql##.Threads_connected" value_type="3">
 					<description>MySQL: Threads currently connected</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4714,7 +4691,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
- 				<item type="2" key="mysql.Threads_created" value_type="3">
+ 				<item type="2" key="mysql##.Threads_created" value_type="3">
 					<description>MySQL: Threads created</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4740,7 +4717,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
- 				<item type="2" key="mysql.Threads_created_rate" value_type="3">
+ 				<item type="2" key="mysql##.Threads_created_rate" value_type="3">
 					<description>MySQL: Threads creation rate</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4766,7 +4743,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.Threads_running" value_type="3">
+				<item type="2" key="mysql##.Threads_running" value_type="3">
 					<description>MySQL: Threads currently running</description>
 					<delay>300</delay>
 					<history>7</history>
@@ -4792,7 +4769,7 @@
 						<application>MySQL</application>
 					</applications>
 				</item>					
-				<item type="2" key="mysql.thread_cache_size" value_type="3">
+				<item type="2" key="mysql##.thread_cache_size" value_type="3">
 					<description>MySQL: Threads cache size</description>
 					<delay>300</delay>
 					<history>7</history>
