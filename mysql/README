@@ -1,0 +1,21 @@
+THIS IS WORK IN PROGRESS.
+
+Provided template is just a stub. You need to regenerate it (and it still 
+may not fit your needs):
+
+ export $SFFX=clients
+ perl trnsfrm.pl mysql_t.xml $SFFX > mysql_$SFFX.xml
+ perl trnsfrm.pl mysql_t.xml > mysql.xml
+
+Zabbix agent user parameters:
+
+ UserParameter=mysql-nx.daily,php /usr/local/bin/mysql_monitor.php daily socket=/var/run/mysqld/mysqld-nx.sock user=root sufix=nx
+ UserParameter=mysql-nx.live,php /usr/local/bin/mysql_monitor.php live socket=/var/run/mysqld/mysqld-nx.sock user=root sufix=nx
+
+Suffix is needed, if you plan to asign template to host multiple times, to 
+monitor more instances of mysql. Template also needs to be adjusted to 
+reflect current suffix (or no suffix).
+
+Note, that if you run this script as root, it will create several files 
+in '/tmp' not writeble by user running zabbix-agentd, and gathering will 
+fail.
