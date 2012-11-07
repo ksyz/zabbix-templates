@@ -604,6 +604,10 @@ function zabbix_config() {
 function zabbix_post($var,$val) {
 	global $server,$host;
 
+	if (preg_match('/^Sugges/', $var) or preg_match('/^Change/', $var)) {
+		return null;
+	}
+
 	switch ( strtolower($val) ) {
 		case "yes":
 		case "on":
