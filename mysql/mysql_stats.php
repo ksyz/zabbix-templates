@@ -1,7 +1,11 @@
+#!/usr/bin/php
 <?php
-
 /**
-Changelog:
+ *  michal.ingeli@gtsce.com ~2012 
+ * based on work of some gentleman on http://www.zabbix.com/wiki/howto/monitor/db/mysql/extensive_mysql_monitoring_including_replication
+ */
+/**
+Original Changelog:
 	Version 0.4:  Added round() to Joins_without_indexes_per_day to remove exponents for large query sets.
 	Version 0.3:  11:57 AM 10/13/2008
 		- Correct where Percent_innodb_cache_hit_rate and/or Percent_innodb_cache_write_waits_required could have been 0
@@ -11,27 +15,88 @@ Changelog:
  */
 
 error_reporting(E_ALL|E_STRICT);
-define('DEBUG',true);
-define('SLOWINNODB',0);   // If you set this to 1, then the script is very careful about status variables to avoid http://bugs.mysql.com/bug.php?id=36600
 
-define('SYSTEM','mysql'.(DEBUG ? "-debug" : ""));
-define('LOG',"/tmp/zabbix_".SYSTEM.".log");
-define('DAT',"/tmp/zabbix_".SYSTEM.".dat");
-define('UTIME',"/tmp/.zabbix_".SYSTEM.".utime");
-define('DTIME',"/tmp/.zabbix_".SYSTEM.".dtime");
-zabbix_config();
-
-date_default_timezone_set('America/New_York');
+if (!isset($argv[1]) or array_search($argv[1], array('daily', 'live')) === FALSE) {
+	print basename($argv[0]).": ( daily | live ) [ username ] [ password ]\n";
+	exit(1);
+}
 
 $type = $argv[1];
 
-$user = $argv[2];
-$pass = $argv[3];
+# --
 
-$cred = "-u$user -p$pass";
+# defaults
+$user = "root";
+$pass = null;
+$jelen = "localhost"; # other sane names like server, host etc are taken.
+$socket = null;
+$port = '';
+$suffix = '';
+$debug = 0;
+
+foreach ($argv as $v) {
+	if (preg_match('/(\S+)=(\S+)/', $v, $refs)) {
+		switch ($refs[1]) {
+			case 'user':
+				$user = $refs[2];
+				break;
+
+			case 'password':
+				$password = $refs[2];
+				break;
+
+			case 'host':
+			case 'socket':
+				if (strpos($refs[2], '/') === FALSE) {
+					$jelen = $host = $refs[2];
+				}
+				else {
+					$jelen = $socket = ":$refs[2]";
+				}
+				break;
+
+			case 'port':
+				$port = $refs[2];
+				break;
+
+			case 'suffix':
+				$suffix = '-'.$refs[2];
+				break;
+
+			case 'debug':
+				if ($refs[2] == "1")
+					$debug = 1;
+				break;
+				
+			default:
+				echo "Invalid option $refs[1] => $refs[2]\n";
+		}
+		
+		# echo "$refs[1] => $refs[2]\n";
+	}
+}
+
+
+$cred = "-u$user";
+if ($pass) 
+	$cred .= " -p$pass";
+
+define('DEBUG', $debug);
+define('SLOWINNODB',0);   // If you set this to 1, then the script is very careful about status variables to avoid http://bugs.mysql.com/bug.php?id=36600
+
+define('SYSTEM','mysql'.(DEBUG ? "-debug" : '') .$suffix);
+define('LOG',"/tmp/_zabbix_".SYSTEM.".log");
+define('DAT',"/tmp/_zabbix_".SYSTEM.".dat");
+define('UTIME',"/tmp/_zabbix_".SYSTEM.".utime");
+define('DTIME',"/tmp/_zabbix_".SYSTEM.".dtime");
+define('ZABBIX_SENDER', "zabbix_sender");
+
+zabbix_config();
+date_default_timezone_set('CET');
 
 $tosendDaily = array();
 
+# doing the same as zabbix_config() lines above, not shure why.
 // Get server information for zabbix_sender
 $config = file_get_contents("/etc/zabbix/zabbix_agentd.conf");
 preg_match("/Hostname\s*=\s*(.*)/i",$config,$parts);
@@ -59,7 +124,13 @@ foreach ( $lines as $line )
 }
 
 // Connect to the MySQL server
-$connection = mysql_connect("localhost",$user,$pass);
+$connection = mysql_connect($jelen,$user,$pass);
+
+if (!is_resource($connection)) {
+	echo mysql_error();
+	die(1);
+}
+
 mysql_select_db("mysql");
 
 // Get the version number
@@ -269,9 +340,10 @@ if ( $type == "daily" ) {
 		'Maximum_memory_exceeds_32bit_capabilities' => !$bit64 ? $Maximum_memory_possible >  gb(2) : 0,
 
 		// Suggested configuration settings
-		'Suggested_table_cache' => byte_size($Suggested_table_cache),
-		'Change_table_cache' => !close($Suggested_table_cache,$table_cache),
-		'table_cache' => $table_cache,
+		# Not supported
+		# 'Suggested_table_cache' => byte_size($Suggested_table_cache),
+		# 'Change_table_cache' => !close($Suggested_table_cache, $table_cache),
+		# 'table_cache' => $table_cache,
 		
 		'Suggested_query_cache_size' => byte_size($Suggested_query_cache_size),
 		'Change_query_cache_size' => !close($Suggested_query_cache_size,$query_cache_size),
@@ -622,10 +694,11 @@ function zabbix_post($var,$val) {
 	if ( !is_numeric($val) )
 		$val = '"'.$val.'"';
 	file_put_contents(DAT,"$server $host 10051 ".SYSTEM.".$var $val\n",FILE_APPEND);
-	$cmd = "zabbix_sender -z $server -p 10051 -s $host -k ".SYSTEM.".$var -o $val";
+	$cmd = ZABBIX_SENDER." -z $server -p 10051 -s $host -k ".SYSTEM.".$var -o $val";
 	if ( DEBUG ) 
 		echo "$cmd\n";
 	else
+	# 	echo "$cmd\n";
 		system("$cmd 2>&1 >> ".LOG);
 }
 
