@@ -10,7 +10,7 @@ use XML::XPath::XMLParser;
 
 my $xp = XML::XPath->new(filename => $ARGV[0]);
 
-my $instance = $ARGV[1];
+my $instance = defined $ARGV[1] ? $ARGV[1] : "";
 
 {
 	# remove triggers
